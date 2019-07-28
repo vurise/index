@@ -38,7 +38,7 @@ body
 
    background: #fff;
 
-   margin-bottom: 20px;
+   margin-bottom: 100px;
 
    border-bottom: 3px solid orange;
 
@@ -75,7 +75,13 @@ body
 
 
 
+    .clockdisplay
+    {
+        margin-top: 20px;
+    }
+
 /*for the small box for search*/
+
 
 .input-group-text
 
@@ -115,18 +121,6 @@ body
 
 
 
-.search-box
-
-    {
-
-        display: inline-flex;
-
-        width:25%;
-
-    }
-
-
-
 .menu-bar
 
 {
@@ -135,7 +129,9 @@ body
 
     height:40%;
 
-    float: right;
+    
+
+
 
 }
 
