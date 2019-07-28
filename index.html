@@ -14,9 +14,13 @@
 
     <link rel ="stylesheet" href= "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="time.js"></script>
+    <script type="stylesheet" src="index.css">"</script>
 
 
 
@@ -98,6 +102,46 @@
   
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  height: 6%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
     </style>
 
 </head>
@@ -106,21 +150,12 @@
 
 <!--Body-->    
 
-<body>
+<body onload="renderTime();">
+
+      <div id = "clockDisplay" clas = "clock" style="margin-bottom: 20px; margin-top: 5px;"></div>
+
 
     <div class="top-nav-bar">
-
-    <div class ="search-box">
-
-        
-
-    
-
-    <input type ="text" class="form-control">
-
-    <span class ="input-group-text" > <i class="fa fa-search"></i> </span>
-
-    </div>
 
     <div class="menu-bar">
 
@@ -142,13 +177,17 @@
 
         <li><a href ="#" style="color: white">Notification</a></li>
 
-        <li><a href ="#" style="color: white">Profie</a></li>
+        <li><a href ="#" style="color: white">Profile</a></li>
 
  <li><a href="" style="color: white">About</a></li>
 
 
 
       </ul>
+
+      <form class="example" action="##" style="margin-left: 1275px ;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
 
     </div>
 
@@ -162,7 +201,7 @@
 
     <center><header class="heading" >
 
-    <h1 class="h1" style=", cursive; color: pink "><b>SOCIAL CALENDER  </b></h1>
+    <h1 class="h1" style=", cursive; color: pink "><b>SOCIAL CALENDAR  </b></h1>
 
     <h4 style="font-family: 'Satisfy', cursive; color: white "> Now don't miss any  <span class="tag">event</span></h4>
 
@@ -190,35 +229,43 @@
 
     <div>
     <div>
-      <a href="hackathons.html" ><p style="font-family: 'Lobster Two', cursive ; margin-left: 500px;font-size: 50px;">Hackathons</p></a>
+      <a href="hackathons.html">
+      	<img src="https://pbs.twimg.com/profile_images/3168796557/58de1c0daca7443175fa88e99eb340b5_400x400.png" style="width: 300px;height:200px;  border-radius: 50%; margin-left: 475px"  alt="hackathons">
 
-      <img src="https://pbs.twimg.com/profile_images/3168796557/58de1c0daca7443175fa88e99eb340b5_400x400.png" style="width: 300px;height:200px; align-self: center; border-radius: 50%; margin-left: 475px"  alt="hackathons">
+      	<p style="font-family: 'Lobster Two', cursive ; margin-left: 500px;font-size: 50px;">Hackathons</p></a>
+
+      
      </div>
     <div>
-       <a href="meetups.html" ><p style="font-family: 'Lobster Two', cursive ; margin-left: 465px;font-size: 50px;">Coding Competitions</p></a>
+       <a href="meetups.html" > <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Discussion.png/640px-Discussion.png" style="width: 300px;height:200px; align-self: center; border-radius: 100%; margin-left: 475px"  alt="hackathons">
 
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Discussion.png/640px-Discussion.png" style="width: 300px;height:200px; align-self: center; border-radius: 100%; margin-left: 475px"  alt="hackathons">
+       	<p style="font-family: 'Lobster Two', cursive ; margin-left: 465px;font-size: 50px;">Coding Competitions</p></a>
+
+      
     </div>
 
     <div>
-       <a href="meetups.html" ><p style="font-family: 'Lobster Two', cursive ; margin-left: 550px;font-size: 50px;">Meetups</p></a>
+       <a href="meetups.html" ><img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX25727338.jpg" style="width: 300px;height:200px; align-self: center; border-radius: 100%; margin-left: 475px"  alt="meetups">
 
-      <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX25727338.jpg" style="width: 300px;height:200px; align-self: center; border-radius: 100%; margin-left: 475px"  alt="meetups">
+       	<p style="font-family: 'Lobster Two', cursive ; margin-left: 550px;font-size: 50px;">Meetups</p></a>
+
+      
     </div>
 
     <div>
-       <a href="MUNs.html" ><p style="font-family: 'Lobster Two', cursive ; margin-left: 550px;font-size: 50px;">MUN's</p></a>
+       <a href="MUNs.html" ><img src=https://static1.squarespace.com/static/55608ea0e4b004a8dfc2cce2/t/5758259da3360cc1305c766c/1465394622313/Team+discussion.jpeg" style="width: 300px;height:200px; align-self: center; border-radius: 100%; margin-left: 475px"  alt="muns">
 
-      <img src=https://static1.squarespace.com/static/55608ea0e4b004a8dfc2cce2/t/5758259da3360cc1305c766c/1465394622313/Team+discussion.jpeg" style="width: 300px;height:200px; align-self: center; border-radius: 100%; margin-left: 475px"  alt="muns">
+       	<p style="font-family: 'Lobster Two', cursive ; margin-left: 550px;font-size: 50px;">MUN's</p></a>
+      
     </div>
 
     <div>
-       <a href="fests.html" ><p style="font-family: 'Lobster Two', cursive ; margin-left: 560px;font-size: 50px;">Fests</p></a>
+       <a href="fests.html" ><img src="http://moziru.com/images/music-clipart-rockstar-12.jpg" style="width: 300px;height:200px; align-self: center; border-radius: 100%; margin-left: 475px"  alt="fests">
 
-      <img src="http://moziru.com/images/music-clipart-rockstar-12.jpg" style="width: 300px;height:200px; align-self: center; border-radius: 100%; margin-left: 475px"  alt="fests">
+       	<p style="font-family: 'Lobster Two', cursive ; margin-left: 560px;font-size: 50px;">Fests</p></a>
+
+      
     </div>
-
-
     </div>
 
   </div>
